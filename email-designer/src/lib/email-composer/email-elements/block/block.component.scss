@@ -1,0 +1,94 @@
+.block-container {
+    cursor: pointer;
+    position: relative;
+
+    .block-hover-box {
+
+        position: absolute;
+        left: 0;
+        color: #fff;
+        z-index: 3;
+        bottom: -34px;
+
+        >span {
+            display: inline-block;
+            margin-right: 3px;
+            background: #6666FF;
+            width: 25px;
+            font-size: 14px;
+            padding: 6px;
+            opacity: 0.8;
+        }
+    }
+
+    border: 1px solid transparent;
+
+    &.selected {
+        border: 1px dashed #6666FF;
+    }
+}
+
+::ng-deep {
+    .empty-block {
+        min-height: 32px;
+        color: #cccccc;
+        line-height: 32px;
+        cursor: pointer;
+        font-size: 16px;
+
+        &:hover {
+            color: #a1a1a1;
+        }
+    }
+
+  .email-text-block {
+    color: rgb(0, 0, 0);
+    font-style: normal;
+    padding: 10px 5px;
+    word-wrap: break-word;
+    word-break: break-word;
+    text-align: left;
+
+    p,
+    h1,
+    h2,
+    h3 {
+      margin-bottom: 0px;
+      line-height: normal !important;
+      margin-bottom: 2px !important;
+    }
+
+    ol,
+    ul {
+      margin: 10px 0px 14px 0px !important;
+      line-height: normal;
+      li {
+        margin: 4px 0px 4px 0px;
+      }
+    }
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+    .email-text-block h1 {
+        font-size: 28px;
+        font-weight: normal;
+    }
+
+    .email-text-block h2 {
+        font-size: 26px;
+        font-weight: normal;
+    }
+
+    .email-text-block h3 {
+        font-size: 22px;
+        font-weight: normal;
+    }
+
+  /*  .email-text-block h3 {
+        font-size: 16px;
+        font-weight: normal;
+    } */
+}

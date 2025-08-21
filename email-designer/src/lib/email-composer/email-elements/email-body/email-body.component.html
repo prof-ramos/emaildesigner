@@ -1,0 +1,11 @@
+<div class="body-block email-text-block">
+    <div *ngIf="hasText(block.content); else emptyBlock">
+        <div [ngStyle]="{ 'font-family': this.block.font || 'Verdana', 'font-size': this.block.fontSize || '16px' }"
+            [innerHTML]="block.content | sanitize : 'html'"></div>
+    </div>
+    <ng-template #emptyBlock>
+        <div class="empty-block">
+            {{ismobileView ? "Add body text":"Click to add body text"}}
+        </div>
+    </ng-template>
+</div>
